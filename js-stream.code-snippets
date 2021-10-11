@@ -1,0 +1,115 @@
+{
+    "Readable Stream": {
+        "scope": "javascript,typescript",
+        "prefix": "readable",
+        "body": [
+"const ${1:readable} = new ReadableStream({",
+"   start(controller) {",
+"       $2",
+"   },",
+"   pull(controller) {",
+"       $3",
+"   },",
+"   cancel(reason) {",
+"       $4",
+"   }",
+"});",
+"$0"
+]
+    },
+    "Writable Stream": {
+        "scope": "javascript,typescript",
+        "prefix": "writable",
+        "body": [
+"const ${1:writable} = new WritableStream({",
+"   start(controller) {",
+"       $2",
+"   },",
+"   write(chunk, controller) {",
+"       $3",
+    "}",
+"});",
+"$0"
+]
+    },
+    "Transform Stream": {
+        "scope": "javascript,typescript",
+        "prefix": "transform",
+        "body": [
+"const ${1:transformer} = new TransformStream({",
+"   transform(chunk, controller) {",
+"       $2",
+"   }",
+"});",
+"$0"
+]
+    },
+    "Pipechain": {
+        "scope": "javascript,typescript",
+        "prefix": "pipechain",
+        "body": "${1:readable}.pipeThrough(${2:transformer}).pipeTo(${3:writable});"
+    },
+    "Get Reader": {
+        "scope": "javascript,typescript",
+        "prefix": "reader",
+        "body": [
+"const ${1:reader} = ${2:readable}.getReader();",
+"$1.read().then($0)"
+]
+    },
+    "Async Get Reader": {
+        "scope": "javascript,typescript",
+        "prefix": "asyncreader",
+        "body": [
+"const ${1:reader} = ${2:readable}.getReader();",
+"const { value, done } = await $1.read();",
+"$0"]
+    },
+    "Async Read Loop": {
+        "scope": "javascript,typescript",
+        "prefix": "asyncreadloop",
+        "body": [
+"const ${1:reader} = ${2:readable}.getReader();",
+"while (true) {",
+"   const { value, done } = await $1.read();",
+"   if (done) break;",
+"   $0",
+"}"
+]
+    },
+    "Async Iterable ReadableStream (polyfill)": {
+        "scope": "javascript,typescript",
+        "prefix": "asynciterate",
+        "body": [
+"function asyncIterate(${1:stream}) {",
+"   const ${2:reader} = $1.getReader();",
+"   return {",
+"       async*[Symbol.asyncIterator]() {",
+"           while (true) {",
+"               const { value, done } = await $2.read();",
+"               if (done) break;",
+"               yield value;",
+"           };",
+"           return $2.releaseLock();",
+"       }",
+"   }",
+"};",
+"$0"
+]
+    },
+    "Get Writer": {
+        "scope": "javascript,typescript",
+        "prefix": "writer",
+        "body": [
+"const ${1:writer} = ${2:writable}.getWriter();",
+"$1.write().then($0)"]
+    },
+    "Async Get Writer": {
+        "scope": "javascript,typescript",
+        "prefix": "asyncwriter",
+        "body": [
+"const ${1:writer} = ${2:writable}.getWriter();",
+"const result = await $1.write();",
+"$0"]
+    },
+}
