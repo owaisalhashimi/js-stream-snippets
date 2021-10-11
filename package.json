@@ -1,0 +1,29 @@
+{
+    "name": "js-streams-snippets",
+    "displayName": "JS Streams Snippets",
+    "icon": "images/js-streams-snippets-logo.png",
+    "description": "",
+    "publisher": "owaisalhashimi",
+    "repository": {
+        "url": "https://github.com/owaisalhashimi"
+    },
+    "version": "1.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/js-streams.code-snippets"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/js-streams.code-snippets"
+            }
+        ]
+    }
+}
