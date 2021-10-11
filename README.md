@@ -2,7 +2,7 @@
 
 ## Features
 
-Some EcmaScript Streams API snippets for javascript and typescript files.
+Some ECMAScript Streams API snippets for javascript and typescript files.
 
 Provides snippets for:
 - Readable Stream
@@ -23,6 +23,10 @@ Provides snippets for:
 ## Known Issues
 
 ## Release Notes
+
+### 1.0.2
+
+Changelog. Typos.
 
 ### 1.0.1
 
