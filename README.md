@@ -4,17 +4,17 @@
 
 Some ECMAScript Streams API snippets for javascript and typescript files.
 
-Provides snippets for:
-- Readable Stream
-- Writable Stream
-- Transform Stream
-- Readable - Transform - Writable Pipechain
-- Get Reader
-- Async Get Reader
-- Async Read Loop
-- Async Iterable ReadableStream (polyfill)
-- Get Writer
-- Async Get Writer
+Provides snippets with tab triggers for:
+- Readable Stream (<kbd>readable</kbd>)
+- Writable Stream (<kbd>writable</kbd>)
+- Transform Stream (<kbd>transform</kbd>)
+- Readable - Transform - Writable Pipechain (<kbd>pipechain</kbd>)
+- Get Reader (<kbd>reader</kbd>)
+- Async Get Reader (<kbd>asyncreader</kbd>)
+- Async Read Loop (<kbd>asyncreadloop</kbd>)
+- Async Iterable ReadableStream (workaround) (<kbd>asynciterate</kbd>)
+- Get Writer (<kbd>writer</kbd>)
+- Async Get Writer (<kbd>asyncwriter</kbd>)
 
 ## Requirements
 
@@ -23,6 +23,10 @@ Provides snippets for:
 ## Known Issues
 
 ## Release Notes
+
+### 1.0.3
+
+Updated documentation.
 
 ### 1.0.2
 
