@@ -2,7 +2,9 @@
 
 ## Features
 
-Some ECMAScript Streams API snippets for javascript and typescript files.
+Some Web Streams API snippets for javascript and typescript files.
+
+![screenshot](./images/js-streams-snippets.gif)
 
 Provides snippets with tab triggers for:
 - Readable Stream (<kbd>readable</kbd>)
@@ -23,6 +25,10 @@ Provides snippets with tab triggers for:
 ## Known Issues
 
 ## Release Notes
+
+### 1.0.4
+
+Include screenshot.
 
 ### 1.0.3
 
