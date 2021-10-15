@@ -22,12 +22,12 @@
         "prefix": "writable",
         "body": [
 "const ${1:writable} = new WritableStream({",
-"   start(controller) {",
-"       $2",
-"   },",
-"   write(chunk, controller) {",
-"       $3",
-    "}",
+"    start(controller) {",
+"        $2",
+"    },",
+"    write(chunk, controller) {",
+"        $3",
+"    }",
 "});",
 "$0"
 ]

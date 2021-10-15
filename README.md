@@ -26,6 +26,10 @@ Provides snippets with tab triggers for:
 
 ## Release Notes
 
+### 1.0.5
+
+Fixed writable stream indentation.
+
 ### 1.0.4
 
 Include screenshot.
